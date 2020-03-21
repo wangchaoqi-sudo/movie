@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="../public/stylesheets/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../public/stylesheets/lunbotu.css" rel="stylesheet" type="text/css" media="all"/>
+    <script type="text/javascript" src="../public/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="../public/javascripts/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="headertop_desc">
+        <div class="wrap">
+            <div class="nav_list">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a target="_blank" href="tencent://message/?uin=2415688425&Menu=yes">
+                       connect：<img src="../public/images/qqcluster.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="account_desc">
+                {{if username}}
+                <ul>
+                    <li><a href="/users">欢迎您，{{username}}</a></li>
+                    <li><a href="/users">退出</a></li>
+                </ul>
+                {{else if !username}}
+                <ul>
+                    <li><a href="/users">获取个性化推荐</a></li>
+                </ul>
+                {{/if}}
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

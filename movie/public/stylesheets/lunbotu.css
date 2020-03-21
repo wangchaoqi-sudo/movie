@@ -1,0 +1,113 @@
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+}
+/* 必要布局样式css */
+.home-banner {
+    background: #fff;
+    height: 450px;
+}
+.home-banner-head {
+    width: 100%;
+}
+.home-banner-head p{
+    margin-left:500px ;
+    width: 100%;
+    left: 50px;
+    color: red;
+    font-size: 20px;
+}
+
+.home-banner-body {
+    margin-top: 15px;
+    position: relative;
+}
+.home-banner-bg {
+    height: 276px;
+    position: absolute;
+    left: 0px;
+    top: 114px;
+    width: 100%;
+}
+.home-banner-slider {
+    position: absolute;
+    width: 1024px;
+    top: 0;
+    left: 60%;
+    margin-left: -500px;
+    min-height: 60px;/*background:#900;*/
+}
+.prev, .next {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background: url(../images/icon-row.png) no-repeat 0 0px;
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    cursor: pointer;
+}
+.next {
+    right: 50px;
+    left: auto;
+    background-position: -116px 0px;
+}
+.prev:hover {
+    background-position: 0 -119px;
+}
+.next:hover {
+    background-position: -116px -119px;
+}
+.home-banner-con {
+    width: 740px;
+    margin: 0 auto;
+}
+.home-shadow {
+    height: 424px;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.1);
+    position: relative;
+    background: #fff;
+}
+.home-banner-text {
+    width: 100%;
+    text-align: center;
+}
+.home-title {
+    font-size: 14px;
+    color: #99091f;
+    height: 20px;
+    text-align: center;
+    line-height: 1.8;
+    margin-top: -5px;
+}
+.home-text {
+    font-size: 14px;
+    color: #999;
+    height: 20px;
+    text-align: center;
+    line-height: 1.8;
+    margin-top: -5px;
+}
+.home-button a {
+    width: 184px;
+    height: 25px;
+    text-align: center;
+    border: solid #2f82ff 1px;
+    border-radius: 28px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 25px;
+    background: #fff;
+    display: block;
+    color: #2f82ff;
+    transition: background-color .3s;
+}
+.home-button a:hover {
+    background-color: #2f82ff;
+    color: #fff
+}

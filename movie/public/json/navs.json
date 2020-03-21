@@ -1,0 +1,19 @@
+{
+	"contentManagement": [
+		{
+			"title": "电影管理",
+			"icon": "icon-text",
+			"href": "page/news/newsList.html",
+			"spread": false
+		},
+		{
+			"title": "用户管理",
+			"icon": "&#xe634;",
+			"href": "page/users/usersList.html",
+			"spread": false
+		}
+	]
+
+}
+
+

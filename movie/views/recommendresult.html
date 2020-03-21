@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="../public/stylesheets/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../public/stylesheets/lunbotu.css" rel="stylesheet" type="text/css" media="all"/>
+    <script type="text/javascript" src="../public/javascripts/jquery.js"></script>
+</head>
+<body>
+{{include './head.html'}}
+<!------------End Header ------------>
+{{include './menu.html'}}
+<!--END MENU-->
+<script type="text/javascript">
+  function o(){
+    window.location.href="/movies/recommend?username={{username2}}&password={{password}}"
+  }
+
+</script>
+<div class="main">
+    <div class="wrap">
+        <div class="content">
+            <div class="content_top">
+                <div class="heading">
+                    <h3>最新上映</h3>
+                </div>
+            </div>
+
+            <div class="section group">
+                {{each movie}}
+                <div class="grid_1_of_5 images_1_of_5">
+                    <a href="register.html"><img style="width:200px;height: 200px" src="{{$value.picture}}" alt="" /></a>
+                    <h2><a href="register.html">导演：{{$value.moviename}}</a></h2>
+                    <div class="price-details">
+                        <div class="price-number">
+                            <p><span class="rupees">上映时间：{{$value.releasetime}}</span></p>
+                        </div>
+                        <div class="add-cart">
+                            <h4><a href="register.html">详情</a></h4>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="content">
+        <div class="content_top">
+            <div class="heading">
+                <h3>亲爱的用户：{{username}},猜您喜欢的电影：</h3>
+            </div>
+        </div>
+
+        <div class="section group">
+            {{each movieinfo}}
+            <div class="grid_1_of_5 images_1_of_5">
+                <a href="register.html"><img style="width:200px;height: 200px" src="{{$value.picture}}" alt="" /></a>
+                <h2><a href="register.html">介绍：{{$value.moviename}}</a></h2>
+                <div class="price-details">
+                    <div class="price-number">
+                        <p><span class="rupees"></span></p>
+                    </div>
+                    <div class="add-cart">
+                        <h4><a href="register.html">详情</a></h4>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>
+    {{include './foot.html'}}
+</body>
+</html>
+

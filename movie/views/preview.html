@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<head>
+<title>Preview</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="../public/stylesheets/style.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript" src="../public/javascripts/jquery.js"></script>
+</head>
+<body>
+{{include './head.html'}}
+   <div class="main">
+   	 <div class="wrap">
+   	 	<div class="section group">
+				<div class="cont-desc span_1_of_2">
+				  <div class="product-details">				
+					<div class="grid images_3_of_2">
+						<img style="width: 1000px;height: 300px" src="{{movie.picture}}" alt="" />
+				  </div>
+				<div class="desc span_3_of_2">
+					<h2>电影名：{{movie.moviename}}</h2>
+					<hr>
+					<p><h2>简介：{{movie.description}}</h2></p>
+					<hr>
+					<div class="price">
+						<p> <span>上映时间:{{movie.releasetime}}</span></p>
+					</div>
+					<hr>
+					<div class="available">
+						<ul>
+						  <li><span>导演:</span> {{movie.director}}</li>
+						  <li><span>演员:</span>&nbsp; {{movie.leadactors}}</li>
+					    </ul>
+					</div>
+
+				<div class="share-desc">
+					<div class="share">
+						<div class="button"><span><a href="/index">返回</a></span></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		  </div>
+
+					</div>
+		</div>
+	 </div>
+   </div>
+{{include './foot.html'}}
+
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="../public/stylesheets/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../public/stylesheets/lunbotu.css" rel="stylesheet" type="text/css" media="all"/>
+    <script type="text/javascript" src="../public/javascripts/jquery.js"></script>
+    <link rel="stylesheet" href="../public/layui/css/layui.css">
+    <script src="../public/layui/layui.js"></script>
+</head>
+<body>
+{{include './head.html'}}
+<!------------End Header ------------>
+<!--END MENU-->
+<script type="text/javascript">
+  function o(){
+    window.location.href="/movies/recommend?username={{username2}}&password={{password}}"
+  }
+
+</script>
+<div class="main">
+    <div class="wrap">
+        <div class="content">
+            <div class="content_bottom">
+                <div class="heading">
+                    <h3>请为以下电影进行打分：</h3>
+                </div>
+            </div>
+
+            <div class="section group">
+
+              <form  action="/movies/submituserscore" method="post">
+                <input type="hidden" name="userid" value="{{userid}}">
+                {{each movieforpage }}
+                <div class="grid_1_of_5 images_1_of_5">
+                  <input type="hidden" name="movieid" value="{{$value.movieid}}">
+                  <<img style="width:200px;height: 200px" src="{{$value.picture}}" alt=""/>
+                  <h2>{{$value.moviename}}</h2>
+                  <div class="price-details">
+                    <div class="price-number">
+                      <p><span class="rupees">等级</span></p>
+                    </div>
+                    <div  class="add-cart star">
+<!--                     //星级评分组件-->
+                    </div>
+                      <input type="hidden" id="moviescore{{$index}}" value="0" name="moviescore">
+                    <div class="clear"></div>
+                  </div>
+                </div>
+                {{/each}}
+                <br>
+                <div class="add-cart">
+                  <button type="button" class="layui-btn layui-btn-radius layui-btn-warm layui-icon layui-icon-refresh-3" id="onload" onclick="o()">刷新
+                  </button>
+                </div>
+
+                <div class="add-cart">
+                  <button type="submit" class="layui-btn layui-btn-radius layui-btn-warm layui-icon layui-icon-upload-drag" >提交
+                      </button>
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        layui.use(['jquery','rate'],function () {
+            var  $ = layui.jquery
+            var  rate =layui.rate
+            $.each($(".star"),function (index,elem) {
+                rate.render({
+                    elem: elem
+                    ,value: 0 //初始值
+                    ,half: true, //开启半星
+                    choose : function (value) {
+                        $("#moviescore"+index).val(value);
+                    }
+                })
+
+            })
+
+        })
+    </script>
+    {{include './foot.html'}}
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>\
+    <link type="text/css" rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<style>
+    .get{
+        font-size: large;
+        color: red;
+
+    }
+</style>
+<body>
+{{include './head.html'}}
+<h1 style="text-align: center;font-size: 25px;color: red">亲爱的用户：{{user.username}},评分成功</h1><br>
+
+<div style="text-align: center;">
+    <img style="height: 400px;width: 400px" src="../public/images/end.jpg">
+</div>
+<br>
+<div style="text-align: center">
+    <a class="get" href="/movies/recommendmovieforuser?userid={{user.userid}}&username={{user.username}}">点击此处获得推荐结果
+        计算结果需要一定时间，请耐心等待</a>
+</div>
+
+<!---->
+
+{{include './foot.html'}}
+</body>
+</html>

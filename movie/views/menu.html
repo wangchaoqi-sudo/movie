@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link href="../public/stylesheets/style.css" rel="stylesheet" type="text/css" media="all"/>-->
+<!--    <link href="../public/stylesheets/lunbotu.css" rel="stylesheet" type="text/css" media="all"/>-->
+<!--    <script type="text/javascript" src="../public/javascripts/jquery.js"></script>-->
+<!--    <script type="text/javascript" src="../public/javascripts/move-top.js"></script>-->
+<!--    <script type="text/javascript" src="../public/javascripts/easing.js"></script>-->
+<!--    <script type="text/javascript" src="../public/javascripts/jquery.SuperSlide.2.1.1.js"></script>-->
+</head>
+<body>
+<div class="wrap">
+    <div class="header_top">
+        <div class="logo">
+            <a href="index.html"><img src="../public/images/logo.png" alt="" /></a>
+        </div>
+        <div class="header_top_right">
+
+            <div class="search_box">
+                <form>
+                    <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+                </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="header_bottom">
+        <div class="header_bottom_left">
+            <div class="categories">
+                <ul>
+                    <h3>Categories</h3>
+                    <li><a href="#">All</a></li>
+                    <li><a href="#">Hindi</a></li>
+                    <li><a href="#">Telugu</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Tamil</a></li>
+                    <li><a href="#">Malayalam</a></li>
+                    <li><a href="#">Kannada</a></li>
+                    <li><a href="#">Bengali</a></li>
+                    <li><a href="#">Assami</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Animation</a></li>
+                    <li><a href="#">Games</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_bottom_right">
+            <!------ Slider ------------>
+            <div class="home-banner">
+
+                <div class="home-banner-head">
+                    <p>最新上映</p>
+                </div>
+                <div class="home-banner-body">
+                    <div class="home-banner-bg"></div>
+                    <div class="home-banner-slider">
+                        <div class="home-banner-con">
+                            <div class="home-shadow">
+                                <div class="bd">
+                                    <ul>
+                                        <li>
+                                            <img src="../public/images/1.jpg" alt="">
+                                            <div class="home-banner-text">
+                                                <div class="home-title">CARITER YAILISI</div>
+                                                <div class="home-text">火爆上映</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../public/images/2.jpg" alt="">
+                                            <div class="home-banner-text">
+                                                <div class="home-title">FLOOS FGDSS</div>
+                                                <div class="home-text">火爆上映</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../public/images/3.jpg" alt="">
+                                            <div class="home-banner-text">
+                                                <div class="home-title">ROSE CAKE</div>
+                                                <div class="home-text">火爆上映</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="prev"></a>
+                        <a href="javascript:void(0)" class="next"></a>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                jQuery(".home-banner-slider").slide({
+                    mainCell: ".bd ul",
+                    effect: "left",
+                    autoPlay: true,
+                    delayTime: 700
+                });
+            </script>
+            <!------End Slider ------------>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>
