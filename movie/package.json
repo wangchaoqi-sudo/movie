@@ -15,7 +15,7 @@
     "express": "~4.16.1",
     "express-art-template": "^1.0.1",
     "formidable": "^1.2.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "layui": "0.0.1",
     "morgan": "~1.9.1",
     "multer": "^1.4.2",
